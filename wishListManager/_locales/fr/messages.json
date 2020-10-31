@@ -1,0 +1,22 @@
+{
+  "appName": {
+    "message": "Gestionnaire de liste de souhaits",
+    "description": "/"
+  },
+  "appDesc": {
+    "message": "/",
+    "description":"/"
+  },
+  "html_title": {
+    "message": "/",
+    "description": "/"
+  },
+  "html_url_support_us": {
+    "message": "https://borisbelloc.com/fr-products.html#support",
+    "description": "Link to the support us page"
+  },
+  "html_url_home": {
+    "message": "https://borisbelloc.com/fr-products.html",
+    "description": "Link to the home page"
+  }
+}

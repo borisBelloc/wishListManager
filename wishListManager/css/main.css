@@ -1,0 +1,15 @@
+[class*='container'] {
+  /* border: 1px solid blue; */
+}
+[class*='row'] {
+  /* border: 1px solid red; */
+}
+[class*='col-'] {
+  /* border: 1px solid yellow; */
+}
+
+/* ---COLOR LIST ---- */
+/* Gold : #dfcf77 */
+/* Teal : #25a7af  */
+/* Dark : #444957 */
+/* ------- */
