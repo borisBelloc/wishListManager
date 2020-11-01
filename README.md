@@ -12,6 +12,10 @@ I thought this would already exist but an extension where you can keep track of 
 
 ----------
 
+##### TODO:
+
+Recup item title, allow used to edit it before and after saving
+
 ##### Doc
 
 Extension current tab : https://developer.chrome.com/extensions/windows#current-window
