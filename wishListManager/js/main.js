@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const currentProduct = {
   title: '',
   price: '',
@@ -9,6 +10,9 @@ const currentProduct = {
 
 $(document).ready(function () {
   let currentTabUrl;
+=======
+$(document).ready(function () {
+>>>>>>> b34a14283c5d2b8a852eb4b7bc67dc8ee9c65148
   // * https://stackoverflow.com/a/14251218/9552861
   // DOC : get current tab : https://developer.chrome.com/extensions/tabs#method-query
 
