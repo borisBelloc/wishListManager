@@ -24,3 +24,4 @@ $(document).ready(function () {
 // https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sdk-code-samples.html
 
 // https://webservices.amazon.com/paapi5/documentation/get-items.html
+

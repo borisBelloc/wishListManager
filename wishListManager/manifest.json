@@ -6,7 +6,10 @@
   "version": "1.0.0",
   "offline_enabled": true,
   "permissions": [
+<<<<<<< HEAD
     "tabs"
+=======
+>>>>>>> 8b050e74655bc869ad773e1be4781aac98017598
   ],
   "background": {
     "scripts": [
