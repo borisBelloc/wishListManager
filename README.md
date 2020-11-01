@@ -19,3 +19,11 @@ Recup item title, allow used to edit it before and after saving
 ##### Doc
 
 Extension current tab : https://developer.chrome.com/extensions/windows#current-window
+
+Localstorage : https://developer.chrome.com/extensions/storage
+
+  "permissions": [
+    "tabs", : acces user current tab
+    "<all_urls>" : access all website
+    "storage"  : access localstorage
+  ],

@@ -1,3 +1,11 @@
+const currentProduct = {
+  title: '',
+  price: '',
+  img: '',
+  urlINI: '',
+  urlBb: '',
+};
+
 
 $(document).ready(function () {
   let currentTabUrl;
@@ -22,8 +30,29 @@ $(document).ready(function () {
   //       $('#current_price').html(data);
   //   }
   // );
+
+  function saveToStorage() {
+    // chrome.storage.sync.set(currentProduct, function() {
+    chrome.storage.sync.set({ key: 'value' }, function () {});
+  }
+  
+  function saveit() {
+    chrome.storage.local.set({ key: '2' }, function () {
+    });
+  }
+
+  /**
+   * Trim string and remove any \n
+   * @param {*} str 
+   */
+  function trimSlashN(str) {
+    return $.trim(str.replace(/[\n]+/g,' '));
+  }
+
   
   // TODO: add loader bootstrap
+  // TODO: url with my id
+  //  Testeur de lien : https://partenaires.amazon.fr/home/tools/linkchecker?ac-ms-src=ac-nav
   $.ajax({
     // url: https://www.amazon.fr/Acer-Chromebook-CB314-1HT-C7GS-Ordinateur-portable/dp/B08CRW23V4
     // url: 'https://www.amazon.fr/Acer-Chromebook-CB314-1HT-C7GS-Ordinateur-portable/dp/B08CRW23V4',
@@ -37,15 +66,23 @@ $(document).ready(function () {
         let productPrice = $("<span>").append(nodes).find("#price_inside_buybox").text();
         $('#productPrice').children("strong").html("productPrice : " + productPrice);
         // * Product Image
-        // let productImage = $("<img>").append(nodes).find("#landingImage").text();
-        // let productImage = $("<img>").append(nodes).find("#landingImage").attr('src');
-        var img = $("<img>").append(nodes).find("#landingImage").attr("src");
-        $("#productImage").attr("src", img);
+        var productImg = $("<img>").append(nodes).find("#landingImage").attr("src");
+        $("#productImage").attr("src", productImg);
+
+        // !
+        currentProduct['title'] = trimSlashN(productTitle);
+        currentProduct['price'] = trimSlashN(productPrice);
+        currentProduct['img'] = productImg;
+
+        // Save to storage ; https://developer.chrome.com/extensions/storage
+        chrome.storage.local.set(currentProduct, function () {})
+        chrome.storage.sync.set(currentProduct, function () {})
+
+        chrome.storage.sync.get(currentProduct, function (result) {
+          console.log('Value currently is ' + result.title);
+        });
     }
 
-
-// alert(img.getAttribute('src')); // foo.jpg
-// alert(img.src); 
   });
 
 
