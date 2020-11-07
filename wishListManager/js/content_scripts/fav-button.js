@@ -18,8 +18,13 @@ fetch(chrome.extension.getURL('html/fav-button.html'))
     .then(data => {
         // Test sur bb.com/thanks
         // document.getElementById('customJumbotron').innerHTML = data;
-        // Amazon
+        // Amazon : ok pour remplacer un contenu par le button
         document.getElementById('title').innerHTML = data;
+
+        // TODO: mettre le bouton apres quelque chose et non a la place
+        // var ici = document.getElementById('productTitle');
+        // ici.appendChild(data);
+
         // other code
         // eg update injected elements,
         // add event listeners or logic to connect to other parts of the app
