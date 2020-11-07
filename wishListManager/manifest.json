@@ -7,6 +7,7 @@
   "offline_enabled": true,
   "permissions": [
     "tabs",
+    "activeTab",
     "<all_urls>",
     "storage"
   ],
@@ -16,6 +17,14 @@
     ],
     "persistent": false
   },
+  "content_scripts": [ {
+    "matches": ["https://*/*", "http://*/*"],
+    "js": ["js/content_scripts/fav-button.js"],
+    "css": ["css/content_scripts/fav-button.css"]
+  } ],
+  "web_accessible_resources": [
+    "html/fav-button.html"
+    ],
   "browser_action": {
     "default_icon": {
       "16": "images/logo16.png",

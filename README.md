@@ -14,16 +14,29 @@ I thought this would already exist but an extension where you can keep track of 
 
 ##### TODO:
 
-Recup item title, allow used to edit it before and after saving
+TODO: coloris l'etoile si objet deja en favoris
+- Recup item title, allow used to edit it before and after saving
+- TODO: les champs recuperer (title, price) sont en place holder dans champs input afin que l'user puisse modifier ou remplir en cas d'absense a la validation du formulaire
 
 ##### Doc
+
+background page : https://developer.chrome.com/extensions/background_pages
 
 Extension current tab : https://developer.chrome.com/extensions/windows#current-window
 
 Localstorage : https://developer.chrome.com/extensions/storage
 
+
+MANIFEST :
+
+
   "permissions": [
     "tabs", : acces user current tab
+    "activetab", : https://developer.chrome.com/extensions/activeTab
     "<all_urls>" : access all website
     "storage"  : access localstorage
   ],
+
+  "content_scripts" -> used pour injection du bouton sur les site 
+
+  "web_accessible_resources" -> html file availlable to inject
