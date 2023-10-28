@@ -40,3 +40,8 @@ MANIFEST :
   "content_scripts" -> used pour injection du bouton sur les site 
 
   "web_accessible_resources" -> html file availlable to inject
+
+  --------------
+
+  Instalation : 
+  Chrome > Extention, load unpacked

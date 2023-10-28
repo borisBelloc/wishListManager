@@ -1,0 +1,18 @@
+{
+  "en": {
+    "appName": {
+      "message": "Your Extension Name"
+    },
+    "appDesc": {
+      "message": "Your Extension Description"
+    }
+  },
+  "fr": {
+    "appName": {
+      "message": "Le nom de votre extension"
+    },
+    "appDesc": {
+      "message": "La description de votre extension"
+    }
+  }
+}
